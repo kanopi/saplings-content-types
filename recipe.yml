@@ -1,0 +1,34 @@
+name: 'Saplings - Content types'
+description: 'Configuration for the Saplings Content types.'
+type: 'Site'
+recipes:
+  - saplings-content-base
+install:
+  # Core.
+  - menu_ui
+  # Contrib.
+  - access_unpublished
+  - field_group
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - pathauto
+  - publication_date
+  - scheduler
+  - scheduler_content_moderation_integration
+  - schema_article
+  - simple_sitemap
+  - token_or
+config:
+  import:
+    # Core.
+    # Comment out as it is in saplings-base which we assume will be used.
+    # Once #3390916 is merged in, we can uncomment this as we could import
+    # config again if it is the same.
+    # menu_ui: "*"
+    # Contrib.
+    access_unpublished: "*"
+    scheduler:
+      - scheduler.settings
+      - views.view.scheduler_scheduled_content
+  actions:
+    # @TODO: Set permissions for content editor role.

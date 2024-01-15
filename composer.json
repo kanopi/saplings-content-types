@@ -1,0 +1,24 @@
+{
+    "name": "kanopi/saplings-content-types",
+    "description": "Configuration for the Saplings Content type.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Jim Birch",
+            "homepage": "https://kanopi.com",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "drupal/access_unpublished": "*",
+        "drupal/field_group": "*",
+        "drupal/pathauto": "*",
+        "drupal/publication_date": "^2.0@beta",
+        "drupal/scheduler": "*",
+        "drupal/scheduler_content_moderation_integration": "^2.0@beta",
+        "drupal/simple_sitemap": "*",
+        "drupal/token_or": "*",
+        "kanopi/saplings-content-base": "*"
+    }
+}
