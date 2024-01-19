@@ -4,6 +4,7 @@ type: 'Site'
 recipes:
   - saplings-content-base
   - saplings-component-types
+  - saplings-media
 install:
   # Core.
   - menu_ui
