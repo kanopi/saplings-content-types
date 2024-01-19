@@ -20,7 +20,6 @@
         "drupal/simple_sitemap": "*",
         "drupal/token_or": "*",
         "kanopi/saplings-component-types": "*",
-        "kanopi/saplings-content-base": "*",
-        "kanopi/saplings-media": "^0.1.9"
+        "kanopi/saplings-content-base": "*"
     }
 }
