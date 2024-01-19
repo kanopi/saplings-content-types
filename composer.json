@@ -19,6 +19,7 @@
         "drupal/scheduler_content_moderation_integration": "^2.0@beta",
         "drupal/simple_sitemap": "*",
         "drupal/token_or": "*",
+        "kanopi/saplings-component-types": "*",
         "kanopi/saplings-content-base": "*"
     }
 }

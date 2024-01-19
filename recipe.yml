@@ -3,6 +3,7 @@ description: 'Configuration for the Saplings Content types.'
 type: 'Site'
 recipes:
   - saplings-content-base
+  - saplings-component-types
 install:
   # Core.
   - menu_ui
