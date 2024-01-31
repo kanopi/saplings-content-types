@@ -1,4 +1,3 @@
-uuid: ae8159c4-3cf1-43ba-b4e0-223bb542cf65
 langcode: en
 status: true
 dependencies:
@@ -28,12 +27,12 @@ third_party_settings:
           field_templates: default
           variant: default
           settings:
-            image_position: ''
-            image_position_token: ''
+            image_position: ""
+            image_position_token: ""
             image_col_classes: col-md-4
-            image_col_classes_token: ''
+            image_col_classes_token: ""
             content_col_classes: col-md-8
-            content_col_classes_token: ''
+            content_col_classes_token: ""
     regions:
       image:
         - sa_featured_image
@@ -49,18 +48,16 @@ third_party_settings:
         formatter: default
         settings:
           link: true
-          'link class': ''
-          link_target: ''
+          "link class": ""
+          link_target: ""
           wrapper: h3
-          class: ''
+          class: ""
         ft:
           id: default
           settings:
-            lb: ''
+            lb: ""
             lb-col: false
-            classes: {  }
-_core:
-  default_config_hash: nfjK5_NTzJsWia-JQXRfyVwoO-SyveM-sdn7kgCTfN8
+            classes: {}
 id: node.sa_page.teaser
 targetEntityType: node
 bundle: sa_page
@@ -69,32 +66,32 @@ content:
   sa_description:
     type: basic_string
     label: hidden
-    settings: {  }
+    settings: {}
     third_party_settings:
       nomarkup:
         enabled: true
-        separator: '|'
-        referenced_entity: ''
+        separator: "|"
+        referenced_entity: ""
     weight: 2
     region: content
   sa_featured_image:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: '16_9'
+      view_mode: "sa_16_9"
       link: false
     third_party_settings:
       nomarkup:
         enabled: true
-        separator: '|'
-        referenced_entity: '1'
+        separator: "|"
+        referenced_entity: "1"
       ds:
         ft:
           id: default
           settings:
-            lb: ''
+            lb: ""
             lb-col: false
-            classes: {  }
+            classes: {}
     weight: 0
     region: image
 hidden:

@@ -1,4 +1,3 @@
-uuid: a70cb7a4-01d1-4e26-a6b1-5e9de79adc10
 langcode: en
 status: true
 dependencies:
@@ -35,12 +34,12 @@ third_party_settings:
           field_templates: default
           variant: default
           settings:
-            image_position: ''
-            image_position_token: ''
+            image_position: ""
+            image_position_token: ""
             image_col_classes: col-md-4
-            image_col_classes_token: ''
+            image_col_classes_token: ""
             content_col_classes: col-md-8
-            content_col_classes_token: ''
+            content_col_classes_token: ""
     regions:
       image:
         - sa_featured_image
@@ -56,18 +55,16 @@ third_party_settings:
         formatter: default
         settings:
           link: true
-          'link class': ''
-          link_target: ''
+          "link class": ""
+          link_target: ""
           wrapper: h3
-          class: ''
+          class: ""
         ft:
           id: default
           settings:
-            lb: ''
+            lb: ""
             lb-col: false
-            classes: {  }
-_core:
-  default_config_hash: OBTE_RyNJqjuFWlha3H3qvcadB3wa3v8nuU2FJrgmxk
+            classes: {}
 id: node.sa_post.teaser
 targetEntityType: node
 bundle: sa_post
@@ -81,35 +78,35 @@ content:
     third_party_settings:
       nomarkup:
         enabled: false
-        separator: '|'
-        referenced_entity: ''
+        separator: "|"
+        referenced_entity: ""
       ds:
         ft:
           id: default
           settings:
-            lb: ''
+            lb: ""
             lb-col: false
-            classes: {  }
+            classes: {}
     weight: 2
     region: content
   sa_featured_image:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: '16_9'
+      view_mode: "sa_16_9"
       link: false
     third_party_settings:
       nomarkup:
         enabled: true
-        separator: '|'
-        referenced_entity: '1'
+        separator: "|"
+        referenced_entity: "1"
       ds:
         ft:
           id: default
           settings:
-            lb: ''
+            lb: ""
             lb-col: false
-            classes: {  }
+            classes: {}
     weight: 0
     region: image
 hidden:

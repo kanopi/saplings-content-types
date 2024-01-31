@@ -1,4 +1,3 @@
-uuid: e1693cc2-ea46-4e74-9268-eef1f1f338ec
 langcode: en
 status: true
 dependencies:
@@ -10,20 +9,18 @@ dependencies:
     - paragraphs.paragraphs_type.sa_tab
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: ETQzwuzmNqYVqzR-2mpbQD1RSNSY4UUAcCVV_zesPFM
 id: node.sa_page.sa_components
 field_name: sa_components
 entity_type: node
 bundle: sa_page
 label: Components
-description: ''
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:paragraph'
+  handler: "default:paragraph"
   handler_settings:
     target_bundles:
       sa_accordion_item: sa_accordion_item
