@@ -1,11 +1,12 @@
+uuid: a70cb7a4-01d1-4e26-a6b1-5e9de79adc10
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.sa_post.sa_body
     - field.field.node.sa_post.sa_author
     - field.field.node.sa_post.sa_author_url
+    - field.field.node.sa_post.sa_body
     - field.field.node.sa_post.sa_category
     - field.field.node.sa_post.sa_description
     - field.field.node.sa_post.sa_external_source
@@ -18,94 +19,106 @@ dependencies:
     - field.field.node.sa_post.sa_type
     - node.type.sa_post
   module:
-    - link
+    - ds
     - nomarkup
+    - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+          variant: default
+          settings:
+            image_position: ''
+            image_position_token: ''
+            image_col_classes: col-md-4
+            image_col_classes_token: ''
+            content_col_classes: col-md-8
+            content_col_classes_token: ''
+    regions:
+      image:
+        - sa_featured_image
+      header:
+        - node_title
+      content:
+        - sa_body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          'link class': ''
+          link_target: ''
+          wrapper: h3
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+_core:
+  default_config_hash: OBTE_RyNJqjuFWlha3H3qvcadB3wa3v8nuU2FJrgmxk
 id: node.sa_post.teaser
 targetEntityType: node
 bundle: sa_post
 mode: teaser
 content:
-  published_at:
-    type: timestamp
+  sa_body:
+    type: text_summary_or_trimmed
     label: hidden
     settings:
-      date_format: custom
-      custom_date_format: 'F j, Y'
-      timezone: ''
-      tooltip:
-        date_format: ''
-        custom_date_format: ''
-      time_diff:
+      trim_length: 300
+    third_party_settings:
+      nomarkup:
         enabled: false
-        future_format: '@interval hence'
-        past_format: '@interval ago'
-        granularity: 2
-        refresh: 60
-        description: ''
-    third_party_settings:
-      nomarkup:
-        enabled: true
         separator: '|'
         referenced_entity: ''
-    weight: 3
-    region: content
-  sa_author:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      nomarkup:
-        enabled: true
-        separator: '|'
-        referenced_entity: ''
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     weight: 2
-    region: content
-  sa_author_url:
-    type: link
-    label: hidden
-    settings:
-      trim_length: null
-      url_only: true
-      url_plain: true
-      rel: '0'
-      target: '0'
-    third_party_settings:
-      nomarkup:
-        enabled: true
-        separator: '|'
-        referenced_entity: ''
-    weight: 1
-    region: content
-  sa_description:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      nomarkup:
-        enabled: true
-        separator: '|'
-        referenced_entity: ''
-    weight: 4
     region: content
   sa_featured_image:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: sa_16_3
+      view_mode: '16_9'
       link: false
     third_party_settings:
       nomarkup:
         enabled: true
         separator: '|'
         referenced_entity: '1'
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     weight: 0
-    region: content
+    region: image
 hidden:
   links: true
-  sa_body: true
+  published_at: true
+  sa_author: true
+  sa_author_url: true
   sa_category: true
+  sa_description: true
   sa_external_source: true
   sa_related_posts: true
   sa_robots: true
