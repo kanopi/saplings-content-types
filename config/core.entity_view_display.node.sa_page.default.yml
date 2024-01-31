@@ -11,9 +11,47 @@ dependencies:
     - field.field.node.sa_page.sa_seo_page_title
     - node.type.sa_page
   module:
+    - ds
     - entity_reference_revisions
     - nomarkup
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_page
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+          variant: default
+    regions:
+      image:
+        - sa_featured_image
+      header:
+        - node_title
+      content:
+        - sa_description
+        - sa_components
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          "link class": ""
+          link_target: ""
+          wrapper: h2
+          class: ""
+        ft:
+          id: default
+          settings:
+            lb: ""
+            lb-col: false
+            classes: {}
 id: node.sa_page.default
 targetEntityType: node
 bundle: sa_page
@@ -26,7 +64,14 @@ content:
       view_mode: default
       link: ""
     third_party_settings: {}
-    weight: 1
+    weight: 3
+    region: content
+  sa_description:
+    type: basic_string
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    weight: 2
     region: content
   sa_featured_image:
     type: entity_reference_entity_view
@@ -40,11 +85,10 @@ content:
         separator: "|"
         referenced_entity: "1"
     weight: 0
-    region: content
+    region: image
 hidden:
   links: true
   published_at: true
-  sa_description: true
   sa_robots: true
   sa_seo_description: true
   sa_seo_image: true
