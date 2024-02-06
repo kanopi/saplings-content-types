@@ -19,6 +19,7 @@ install:
   - schema_article
   - simple_sitemap
   - token_or
+  - ui_patterns_layouts
 config:
   import:
     # Core.

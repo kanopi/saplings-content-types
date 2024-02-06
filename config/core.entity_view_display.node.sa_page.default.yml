@@ -42,16 +42,16 @@ third_party_settings:
         formatter: default
         settings:
           link: false
-          "link class": ""
-          link_target: ""
+          'link class': ''
+          link_target: ''
           wrapper: h2
-          class: ""
+          class: ''
         ft:
           id: default
           settings:
-            lb: ""
+            lb: ''
             lb-col: false
-            classes: {}
+            classes: {  }
 id: node.sa_page.default
 targetEntityType: node
 bundle: sa_page
@@ -62,28 +62,40 @@ content:
     label: hidden
     settings:
       view_mode: default
-      link: ""
-    third_party_settings: {}
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     weight: 3
     region: content
   sa_description:
     type: basic_string
     label: hidden
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 2
     region: content
   sa_featured_image:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: "sa_16_9"
+      view_mode: sa_16_9
       link: false
     third_party_settings:
       nomarkup:
         enabled: true
-        separator: "|"
-        referenced_entity: "1"
+        separator: '|'
+        referenced_entity: '1'
     weight: 0
     region: image
 hidden:
