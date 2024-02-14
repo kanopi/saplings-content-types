@@ -44,7 +44,7 @@ third_party_settings:
           link: false
           'link class': ''
           link_target: ''
-          wrapper: h2
+          wrapper: h1
           class: ''
         ft:
           id: default
