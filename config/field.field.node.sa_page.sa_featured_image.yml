@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.sa_featured_image
-    - media.type.sa_featured_image
+    - media.type.image
     - node.type.sa_page
 id: node.sa_page.sa_featured_image
 field_name: sa_featured_image
@@ -19,10 +19,10 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      sa_featured_image: sa_featured_image
+      image: image
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: sa_featured_image
 field_type: entity_reference
