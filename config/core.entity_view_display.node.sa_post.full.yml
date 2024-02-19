@@ -1,5 +1,5 @@
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.full
@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.sa_post.sa_description
     - field.field.node.sa_post.sa_external_source
     - field.field.node.sa_post.sa_featured_image
+    - field.field.node.sa_post.sa_header_position
+    - field.field.node.sa_post.sa_overlay
     - field.field.node.sa_post.sa_related_posts
     - field.field.node.sa_post.sa_robots
     - field.field.node.sa_post.sa_seo_description
@@ -214,6 +216,8 @@ hidden:
   sa_category: true
   sa_description: true
   sa_external_source: true
+  sa_header_position: true
+  sa_overlay: true
   sa_robots: true
   sa_seo_description: true
   sa_seo_image: true
