@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.sa_seo_image
-    - media.type.sa_featured_image
+    - media.type.image
     - node.type.sa_post
 id: node.sa_post.sa_seo_image
 field_name: sa_seo_image
@@ -19,7 +19,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      sa_featured_image: sa_featured_image
+      image: image
     sort:
       field: _none
       direction: ASC
