@@ -5,6 +5,9 @@ dependencies:
     - field.field.node.sa_page.sa_components
     - field.field.node.sa_page.sa_description
     - field.field.node.sa_page.sa_featured_image
+    - field.field.node.sa_page.sa_header_position
+    - field.field.node.sa_page.sa_hide_header
+    - field.field.node.sa_page.sa_overlay
     - field.field.node.sa_page.sa_robots
     - field.field.node.sa_page.sa_seo_description
     - field.field.node.sa_page.sa_seo_image
@@ -41,6 +44,9 @@ third_party_settings:
       children:
         - sa_description
         - sa_featured_image
+        - sa_overlay
+        - sa_header_position
+        - sa_hide_header
       label: Summary
       region: content
       parent_name: group_administration
@@ -158,6 +164,25 @@ content:
     third_party_settings:
       media_library_edit:
         show_edit: '1'
+  sa_header_position:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sa_hide_header:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sa_overlay:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   sa_robots:
     type: string_textfield
     weight: 5

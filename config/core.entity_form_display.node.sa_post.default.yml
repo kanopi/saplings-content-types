@@ -2,13 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.sa_post.sa_body
     - field.field.node.sa_post.sa_author
     - field.field.node.sa_post.sa_author_url
+    - field.field.node.sa_post.sa_body
     - field.field.node.sa_post.sa_category
     - field.field.node.sa_post.sa_description
     - field.field.node.sa_post.sa_external_source
     - field.field.node.sa_post.sa_featured_image
+    - field.field.node.sa_post.sa_header_position
+    - field.field.node.sa_post.sa_overlay
     - field.field.node.sa_post.sa_related_posts
     - field.field.node.sa_post.sa_robots
     - field.field.node.sa_post.sa_seo_description
@@ -51,6 +53,8 @@ third_party_settings:
       children:
         - sa_description
         - sa_featured_image
+        - sa_overlay
+        - sa_header_position
         - sa_author
         - sa_author_url
         - sa_external_source
@@ -121,16 +125,6 @@ targetEntityType: node
 bundle: sa_post
 mode: default
 content:
-  sa_body:
-    type: text_textarea_with_summary
-    weight: 2
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 5
@@ -163,7 +157,7 @@ content:
     third_party_settings: {  }
   sa_author:
     type: string_textfield
-    weight: 34
+    weight: 36
     region: content
     settings:
       size: 60
@@ -171,11 +165,21 @@ content:
     third_party_settings: {  }
   sa_author_url:
     type: link_default
-    weight: 35
+    weight: 37
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  sa_body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   sa_category:
     type: options_buttons
@@ -193,7 +197,7 @@ content:
     third_party_settings: {  }
   sa_external_source:
     type: link_default
-    weight: 36
+    weight: 38
     region: content
     settings:
       placeholder_url: ''
@@ -208,6 +212,18 @@ content:
     third_party_settings:
       media_library_edit:
         show_edit: '1'
+  sa_header_position:
+    type: options_select
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sa_overlay:
+    type: options_select
+    weight: 34
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   sa_related_posts:
     type: inline_entity_form_complex
     weight: 8
