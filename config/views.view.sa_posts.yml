@@ -21,7 +21,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Posts
+      title: ''
       fields:
         title:
           id: title
@@ -216,7 +216,7 @@ display:
       style:
         type: default
         options:
-          row_class: ''
+          row_class: 'col-md-3 mb-3'
           default_row_class: false
           uses_fields: false
       row:
@@ -232,6 +232,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: 'row card-deck'
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -245,14 +246,40 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  block_1:
+    id: block_1
+    display_title: 'Posts (Up to 4)'
+    display_plugin: block
+    position: 2
+    display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      defaults:
+        pager: false
+      display_description: ''
+      display_extenders: {  }
+      block_description: 'Posts (Up to Four)'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   block_posts:
     id: block_posts
-    display_title: Block
+    display_title: 'All Posts'
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
-      block_description: Posts
+      block_description: 'All Posts'
     cache_metadata:
       max-age: -1
       contexts:
