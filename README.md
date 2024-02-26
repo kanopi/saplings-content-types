@@ -18,6 +18,7 @@ Welcome to the Saplings-Content-Types repository, the central hub for managing v
       - Configures the UI Patterns Suite, including modules and themes.
          - **[kanopi/saplings_child](https://github.com/kanopi/saplings_child) [Theme]**
             - Custom base theme, a child of the Ui Suite Bootstrap Contrib theme.
+              
    c. **[kanopi/saplings_custom](https://github.com/kanopi/saplings_custom) [Module]**
             - Contributed module with utility commands.
 
