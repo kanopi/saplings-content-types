@@ -38,13 +38,13 @@ config:
       simple_config_update:
         tags.canonical_url: '[site:url]'
         tags.description: '[node:sa_description|node:sa_seo_description]'
-        tags.image_src: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook]'
+        tags.image_src: '[node:sa_seo_image:entity:field_media_image:sa_social_media_facebook|node:sa_featured_image:entity:field_media_image:sa_social_media_facebook]'
         tags.og_description: '[node:sa_description|node:sa_seo_description]'
-        tags.og_image: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook]'
-        tags.og_image_alt: '[node:sa_featured_image:entity:field_media_image:alt]'
-        tags.og_image_height: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:height]'
-        tags.og_image_type: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:mimetype]'
-        tags.og_image_width: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:width]'
+        tags.og_image: '[node:sa_seo_image:entity:field_media_image:sa_social_media_facebook|node:sa_featured_image:entity:field_media_image:sa_social_media_facebook]'
+        tags.og_image_alt: '[node:sa_seo_image:entity:field_media_image:alt|node:sa_featured_image:entity:field_media_image:alt]'
+        tags.og_image_height: '[node:sa_seo_image:entity:field_media_image:sa_social_media_facebook:height|node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:height]'
+        tags.og_image_type: '[node:sa_seo_image:entity:field_media_image:sa_social_media_facebook:mimetype|node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:mimetype]'
+        tags.og_image_width: '[node:sa_seo_image:entity:field_media_image:sa_social_media_facebook:width|node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:width]'
         tags.og_locale: en_US
         tags.og_site_name: '[site:name]'
         tags.og_title: '[node:sa_seo_page_title|node:title]'
@@ -56,8 +56,8 @@ config:
         tags.shortlink: '[site:url]'
         tags.title: '[node:sa_seo_page_title|node:title] | [site:name]'
         tags.twitter_cards_description: '[node:sa_description|node:sa_seo_description]'
-        tags.twitter_cards_image: '[node:sa_featured_image:entity:field_media_image:sa_social_media_x:url]'
-        tags.twitter_cards_image_alt: '[node:sa_featured_image:entity:field_media_image:alt]'
+        tags.twitter_cards_image: '[node:sa_seo_image:entity:field_media_image:sa_social_media_x:url|node:sa_featured_image:entity:field_media_image:sa_social_media_x:url]'
+        tags.twitter_cards_image_alt: '[node:sa_seo_image:entity:field_media_image:alt|node:sa_featured_image:entity:field_media_image:alt]'
         tags.twitter_cards_title: '[node:sa_seo_page_title|node:title]'
         tags.twitter_cards_type: summary_large_image
     # Set permissions for anonymous role.
