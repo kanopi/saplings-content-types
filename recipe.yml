@@ -36,30 +36,30 @@ config:
     # Set Metatag Home page:
     metatag.metatag_defaults.front:
       simple_config_update:
-        canonical_url: '[site:url]'
-        description: '[node:sa_description|node:sa_seo_description]'
-        image_src: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook]'
-        og_description: '[node:sa_description|node:sa_seo_description]'
-        og_image: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook]'
-        og_image_alt: '[node:sa_featured_image:entity:field_media_image:alt]'
-        og_image_height: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:height]'
-        og_image_type: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:mimetype]'
-        og_image_width: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:width]'
-        og_locale: en_US
-        og_site_name: '[site:name]'
-        og_title: '[node:sa_seo_page_title|node:title]'
-        og_type: website
-        og_updated_time: '[node:changed:custom:c]'
-        og_url: '[current-page:url:absolute]'
-        referrer: unsafe-url
-        rights: 'Copyright ©[date:html_year] All rights reserved.'
-        shortlink: '[site:url]'
-        title: '[node:sa_seo_page_title|node:title] | [site:name]'
-        twitter_cards_description: '[node:sa_description|node:sa_seo_description]'
-        twitter_cards_image: '[node:sa_featured_image:entity:field_media_image:sa_social_media_x:url]'
-        twitter_cards_image_alt: '[node:sa_featured_image:entity:field_media_image:alt]'
-        twitter_cards_title: '[node:sa_seo_page_title|node:title]'
-        twitter_cards_type: summary_large_image
+        tags.canonical_url: '[site:url]'
+        tags.description: '[node:sa_description|node:sa_seo_description]'
+        tags.image_src: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook]'
+        tags.og_description: '[node:sa_description|node:sa_seo_description]'
+        tags.og_image: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook]'
+        tags.og_image_alt: '[node:sa_featured_image:entity:field_media_image:alt]'
+        tags.og_image_height: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:height]'
+        tags.og_image_type: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:mimetype]'
+        tags.og_image_width: '[node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:width]'
+        tags.og_locale: en_US
+        tags.og_site_name: '[site:name]'
+        tags.og_title: '[node:sa_seo_page_title|node:title]'
+        tags.og_type: website
+        tags.og_updated_time: '[node:changed:custom:c]'
+        tags.og_url: '[current-page:url:absolute]'
+        tags.referrer: unsafe-url
+        tags.rights: 'Copyright ©[date:html_year] All rights reserved.'
+        tags.shortlink: '[site:url]'
+        tags.title: '[node:sa_seo_page_title|node:title] | [site:name]'
+        tags.twitter_cards_description: '[node:sa_description|node:sa_seo_description]'
+        tags.twitter_cards_image: '[node:sa_featured_image:entity:field_media_image:sa_social_media_x:url]'
+        tags.twitter_cards_image_alt: '[node:sa_featured_image:entity:field_media_image:alt]'
+        tags.twitter_cards_title: '[node:sa_seo_page_title|node:title]'
+        tags.twitter_cards_type: summary_large_image
     # Set permissions for anonymous role.
     user.role.anonymous:
       ensure_exists:
