@@ -30,6 +30,7 @@ config:
     # menu_ui: "*"
     # Contrib.
     access_unpublished: "*"
+    pathauto: "*"
     scheduler:
       - scheduler.settings
       - views.view.scheduler_scheduled_content
