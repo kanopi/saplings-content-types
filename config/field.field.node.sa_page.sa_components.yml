@@ -6,6 +6,7 @@ dependencies:
     - node.type.sa_page
     - paragraphs.paragraphs_type.sa_accordion_item
     - paragraphs.paragraphs_type.sa_carousel_item
+    - paragraphs.paragraphs_type.sa_faq_item
     - paragraphs.paragraphs_type.sa_tab
   module:
     - entity_reference_revisions
@@ -26,6 +27,7 @@ settings:
       sa_accordion_item: sa_accordion_item
       sa_carousel_item: sa_carousel_item
       sa_tab: sa_tab
+      sa_faq_item: sa_faq_item
     negate: 1
     target_bundles_drag_drop:
       sa_accordion:
@@ -45,6 +47,12 @@ settings:
         enabled: false
       sa_carousel_item:
         weight: 18
+        enabled: true
+      sa_faq:
+        weight: 23
+        enabled: false
+      sa_faq_item:
+        weight: 30
         enabled: true
       sa_filtered_list:
         weight: 19
