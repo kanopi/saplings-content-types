@@ -5,9 +5,9 @@ id: node__sa_page
 label: 'Content: Page'
 tags:
   canonical_url: '[site:url]'
-  description: '[node:sa_description|node:sa_seo_description]'
+  description: '[node:sa_seo_description|node:sa_description]'
   image_src: '[node:sa_seo_image:entity:field_media_image:sa_social_media_facebook|node:sa_featured_image:entity:field_media_image:sa_social_media_facebook]'
-  og_description: '[node:sa_description|node:sa_seo_description]'
+  og_description: '[node:sa_seo_description|node:sa_description]'
   og_image: '[node:sa_seo_image:entity:field_media_image:sa_social_media_facebook|node:sa_featured_image:entity:field_media_image:sa_social_media_facebook]'
   og_image_alt: '[node:sa_seo_image:entity:field_media_image:alt|node:sa_featured_image:entity:field_media_image:alt]'
   og_image_height: '[node:sa_seo_image:entity:field_media_image:sa_social_media_facebook:height|node:sa_featured_image:entity:field_media_image:sa_social_media_facebook:height]'
@@ -22,7 +22,7 @@ tags:
   referrer: unsafe-url
   rights: 'Copyright ©[date:html_year] All rights reserved.'
   title: '[node:sa_seo_page_title|node:title] | [site:name]'
-  twitter_cards_description: '[node:sa_description|node:sa_seo_description]'
+  twitter_cards_description: '[node:sa_seo_description|node:sa_description]'
   twitter_cards_image: '[node:sa_seo_image:entity:field_media_image:sa_social_media_x:url|node:sa_featured_image:entity:field_media_image:sa_social_media_x:url]'
   twitter_cards_image_alt: '[node:sa_seo_image:entity:field_media_image:alt|node:sa_featured_image:entity:field_media_image:alt]'
   twitter_cards_title: '[node:sa_seo_page_title|node:title]'
