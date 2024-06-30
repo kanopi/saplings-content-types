@@ -11,11 +11,15 @@ of content creation and management.
 
 1. **[kanopi/saplings-content-base](https://github.com/kanopi/saplings-content-base)**
     - Contains base fields and configurations for all content types in Saplings.
+
   a. **[kanopi/saplings-media](https://github.com/kanopi/saplings-media)**
     - Handles Media entities and implements best practices configurations.
+
   b. **[kanopi/saplings-theme](https://github.com/kanopi/saplings-theme)**
     - Configures the UI Patterns Suite, including modules and themes.
+
   c. **[kanopi/saplings_custom](https://github.com/kanopi/saplings_custom)[Module]**
     - Contributed module with utility commands.
+
 2. **[kanopi/saplings-component-types](https://github.com/kanopi/saplings-component-types)**
    - Handles Paragraphs.
