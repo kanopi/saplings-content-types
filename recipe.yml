@@ -7,10 +7,11 @@ recipes:
 install:
   # Core.
   - menu_ui
-  - tour
   # Contrib.
   - access_unpublished
   - field_group
+  - inline_entity_form
+  - metatag
   - metatag_open_graph
   - metatag_twitter_cards
   - pathauto
@@ -18,22 +19,20 @@ install:
   - scheduler
   - scheduler_content_moderation_integration
   - schema_article
+  - schema_metatag
   - simple_sitemap
   - token_or
+  - tour
+  - tour_enhancements
   - ui_patterns_layouts
 config:
   import:
-    # Core.
-    # Comment out as it is in saplings-base which we assume will be used.
-    # Once #3390916 is merged in, we can uncomment this as we could import
-    # config again if it is the same.
-    # menu_ui: "*"
     # Contrib.
-    access_unpublished: "*"
+    metatag: "*"
     pathauto: "*"
     scheduler:
-      - scheduler.settings
       - views.view.scheduler_scheduled_content
+    schema_metatag: "*"
   actions:
     # Set Metatag Home page:
     metatag.metatag_defaults.front:
@@ -83,8 +82,6 @@ config:
         - 'access environment indicator ribbon'
         - 'access help pages'
         - 'access media overview'
-        - 'access media_entity_browser entity browser pages'
-        - 'access media_entity_browser_modal entity browser pages'
         - 'access patterns page'
         - 'access shortcuts'
         - 'access site in maintenance mode'
@@ -130,11 +127,6 @@ config:
         - 'update any media'
         - 'update media'
         - 'use admin toolbar search'
-        - 'use editorial transition archive'
-        - 'use editorial transition archived_draft'
-        - 'use editorial transition archived_published'
-        - 'use editorial transition create_new_draft'
-        - 'use editorial transition publish'
         - 'use text format full_html'
         - 'view all media revisions'
         - 'view all revisions'
