@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.storage.node.sa_components
     - node.type.sa_page
+    - paragraphs.paragraphs_type.sa_existing_content_card
     - paragraphs.paragraphs_type.sa_accordion_item
     - paragraphs.paragraphs_type.sa_carousel_item
     - paragraphs.paragraphs_type.sa_faq_item
@@ -28,12 +29,16 @@ settings:
   handler_settings:
     target_bundles:
       sa_accordion_item: sa_accordion_item
+      sa_existing_content_card: sa_existing_content_card
       sa_carousel_item: sa_carousel_item
       sa_tab: sa_tab
       sa_stat: sa_stat
       sa_faq_item: sa_faq_item
     negate: 1
     target_bundles_drag_drop:
+      sa_existing_content_card:
+        weight: 18
+        enabled: true
       sa_accordion:
         weight: 13
         enabled: false
