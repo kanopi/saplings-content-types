@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.sa_post.sa_description
     - field.field.node.sa_post.sa_external_source
     - field.field.node.sa_post.sa_featured_image
-    - field.field.node.sa_post.sa_gallery
     - field.field.node.sa_post.sa_header_position
     - field.field.node.sa_post.sa_overlay
     - field.field.node.sa_post.sa_related_posts
@@ -80,15 +79,6 @@ content:
         separator: '|'
         referenced_entity: ''
     weight: 1
-    region: content
-  sa_gallery:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 3
     region: content
   sa_related_posts:
     type: entity_reference_entity_view
