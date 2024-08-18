@@ -24,7 +24,6 @@ install:
   - simple_sitemap
   - token_or
   - tour
-  - tour_enhancements
   - ui_patterns_layouts
 config:
   import:

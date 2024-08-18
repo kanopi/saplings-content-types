@@ -24,7 +24,6 @@
         "drupal/simple_sitemap": "*",
         "drupal/token_or": "*",
         "drupal/tour": "*",
-        "drupal/tour_enhancements": "*",
         "kanopi/saplings-component-types": "*",
         "kanopi/saplings-content-base": "*"
     }
