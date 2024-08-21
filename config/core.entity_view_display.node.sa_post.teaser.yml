@@ -41,7 +41,7 @@ third_party_settings:
             image_col_classes_token: ''
             content_col_classes: col-md-8
             content_col_classes_token: ''
-            height: 0
+            height: 1
             height_token: ''
     regions:
       image:
@@ -102,6 +102,7 @@ content:
     weight: 0
     region: image
 hidden:
+  langcode: true
   links: true
   published_at: true
   sa_author: true
@@ -117,3 +118,4 @@ hidden:
   sa_seo_image: true
   sa_seo_page_title: true
   sa_type: true
+  search_api_excerpt: true
