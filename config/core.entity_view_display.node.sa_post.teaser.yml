@@ -41,7 +41,7 @@ third_party_settings:
             image_col_classes_token: ''
             content_col_classes: col-md-8
             content_col_classes_token: ''
-            height: 0
+            height: 1
             height_token: ''
     regions:
       image:

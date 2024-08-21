@@ -21,7 +21,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: pattern_card
+      id: pattern_simple_card
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -36,6 +36,8 @@ third_party_settings:
             image_col_classes_token: ''
             content_col_classes: col-md-8
             content_col_classes_token: ''
+            height: 1
+            height_token: ''
     regions:
       image:
         - sa_featured_image
