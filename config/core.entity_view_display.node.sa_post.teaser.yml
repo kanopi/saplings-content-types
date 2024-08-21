@@ -102,7 +102,6 @@ content:
     weight: 0
     region: image
 hidden:
-  langcode: true
   links: true
   published_at: true
   sa_author: true
