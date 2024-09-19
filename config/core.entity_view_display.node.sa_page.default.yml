@@ -1,12 +1,15 @@
+uuid: caca6a3d-7138-4895-87c7-8034f7f530f5
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.sa_page.sa_components
     - field.field.node.sa_page.sa_description
-    - field.field.node.sa_page.sa_featured_image
+    - field.field.node.sa_page.sa_featured_media
     - field.field.node.sa_page.sa_header_position
     - field.field.node.sa_page.sa_hide_header
+    - field.field.node.sa_page.sa_include_mute_button
+    - field.field.node.sa_page.sa_include_pause_button
     - field.field.node.sa_page.sa_overlay
     - field.field.node.sa_page.sa_robots
     - field.field.node.sa_page.sa_seo_description
@@ -18,6 +21,8 @@ dependencies:
     - entity_reference_revisions
     - nomarkup
     - user
+_core:
+  default_config_hash: j8mnVU00XpXP9Uj02Km9OId4LuxG-TZtTcMuyW0_D8E
 id: node.sa_page.default
 targetEntityType: node
 bundle: sa_page
@@ -45,13 +50,14 @@ content:
     weight: 0
     region: content
 hidden:
-  langcode: true
   links: true
   published_at: true
   sa_description: true
-  sa_featured_image: true
+  sa_featured_media: true
   sa_header_position: true
   sa_hide_header: true
+  sa_include_mute_button: true
+  sa_include_pause_button: true
   sa_overlay: true
   sa_robots: true
   sa_seo_description: true
