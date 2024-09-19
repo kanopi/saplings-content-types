@@ -20,8 +20,6 @@ dependencies:
     - entity_reference_revisions
     - nomarkup
     - user
-_core:
-  default_config_hash: j8mnVU00XpXP9Uj02Km9OId4LuxG-TZtTcMuyW0_D8E
 id: node.sa_page.default
 targetEntityType: node
 bundle: sa_page

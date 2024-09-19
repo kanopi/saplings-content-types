@@ -63,8 +63,6 @@ third_party_settings:
             lb: ''
             lb-col: false
             classes: {  }
-_core:
-  default_config_hash: rQRRO241GRtVQSkauoIflEuFeR_dLjDo0yBoKVrrXag
 id: node.sa_page.teaser
 targetEntityType: node
 bundle: sa_page

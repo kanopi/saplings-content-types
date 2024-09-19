@@ -20,8 +20,6 @@ dependencies:
     - nomarkup
     - options
     - user
-_core:
-  default_config_hash: DgrPN_2X_IBxQJ7EqcZiqt1al1TJpQmQNNsSiFXnAjI
 id: node.sa_page.hero
 targetEntityType: node
 bundle: sa_page

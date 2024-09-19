@@ -97,8 +97,6 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
-_core:
-  default_config_hash: wvKr7TNQghcf3IM-Zyo4JL26H0atRq0g90sWOlCsrYU
 id: node.sa_page.default
 targetEntityType: node
 bundle: sa_page
