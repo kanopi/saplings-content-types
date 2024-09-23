@@ -45,7 +45,6 @@ third_party_settings:
     group_summary:
       children:
         - sa_description
-        - sa_featured_image
         - sa_featured_media
         - sa_overlay
         - sa_header_position
@@ -165,8 +164,14 @@ content:
     weight: 5
     region: content
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      media_types:
+        - image
+        - remote_video
+        - video
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+        edit_form_mode: default
   sa_header_position:
     type: options_select
     weight: 7
