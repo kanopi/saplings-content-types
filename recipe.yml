@@ -10,6 +10,7 @@ install:
   # Contrib.
   - access_unpublished
   - entity_browser
+  - entity_form
   - field_group
   - inline_entity_form
   - metatag
