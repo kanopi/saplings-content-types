@@ -19,7 +19,7 @@
         "drupal/pathauto": "*",
         "drupal/publication_date": "^3",
         "drupal/scheduler": "*",
-        "drupal/scheduler_content_moderation_integration": "^2.0@beta",
+        "drupal/scheduler_content_moderation_integration": "^3",
         "drupal/schema_metatag": "*",
         "drupal/simple_sitemap": "*",
         "drupal/token_or": "*",
