@@ -80,7 +80,6 @@ config:
         - 'access block library'
         - 'access content overview'
         - 'access environment indicator'
-        - 'access environment indicator ribbon'
         - 'access help pages'
         - 'access media overview'
         - 'access patterns page'
