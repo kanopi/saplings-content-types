@@ -24,7 +24,7 @@ third_party_settings:
 name: Post
 type: sa_post
 description: 'Used for filterable pieces of content like articles, news, press releases, etc.  Can be categorized, and then filtered using the Post Type and Category taxonomies.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false
