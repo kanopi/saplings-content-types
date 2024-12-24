@@ -27,6 +27,7 @@ install:
   - tour
   - ui_patterns_layouts
 config:
+  strict: false
   import:
     # Contrib.
     metatag: "*"
