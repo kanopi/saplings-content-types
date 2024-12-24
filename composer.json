@@ -11,20 +11,20 @@
         }
     ],
     "require": {
-        "drupal/access_unpublished": "*",
-        "drupal/entity_browser": "*",
-        "drupal/field_group": "*",
+        "drupal/access_unpublished": "^1.6",
+        "drupal/entity_browser": "^2.12",
+        "drupal/field_group": "^4.0@alpha",
         "drupal/inline_entity_form": "^3.0.0@rc",
-        "drupal/metatag": "*",
-        "drupal/pathauto": "*",
+        "drupal/metatag": "^2.1",
+        "drupal/pathauto": "^1.13",
         "drupal/publication_date": "^3",
-        "drupal/scheduler": "*",
+        "drupal/scheduler": "^2.1",
         "drupal/scheduler_content_moderation_integration": "^3",
-        "drupal/schema_metatag": "*",
-        "drupal/simple_sitemap": "*",
-        "drupal/token_or": "*",
-        "drupal/tour": "*",
-        "kanopi/saplings-component-types": "*",
-        "kanopi/saplings-content-base": "*"
+        "drupal/schema_metatag": "^3",
+        "drupal/simple_sitemap": "^4.2",
+        "drupal/token_or": "^2.3",
+        "drupal/tour": "^2",
+        "kanopi/saplings-component-types": "^1.0.0-beta.29",
+        "kanopi/saplings-content-base": "^1.0.0-beta.10"
     }
 }
