@@ -2,6 +2,7 @@ name: 'Saplings - Content types'
 description: 'Configuration for the Saplings Content types.'
 type: 'Site'
 recipes:
+  - core/recipes/content_editor_role
   - saplings-content-base
   - saplings-component-types
 install:
@@ -65,8 +66,6 @@ config:
         tags.twitter_cards_type: summary_large_image
     # Set permissions for anonymous role.
     user.role.anonymous:
-      ensure_exists:
-        id: anonymous
       grantPermissions:
         - 'access content'
         - 'access sitemap'
@@ -74,8 +73,6 @@ config:
         - 'access_unpublished node sa_post'
     # Set permissions for content editor role.
     user.role.content_editor:
-      ensure_exists:
-        id: content_editor
       grantPermissions:
         - 'access administration pages'
         - 'access block library'
