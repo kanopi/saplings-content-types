@@ -77,7 +77,6 @@ config:
         - 'access administration pages'
         - 'access block library'
         - 'access content overview'
-        - 'access environment indicator'
         - 'access help pages'
         - 'access media overview'
         - 'access patterns page'
