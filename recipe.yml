@@ -69,8 +69,6 @@ config:
       grantPermissions:
         - 'access content'
         - 'access sitemap'
-        - 'access_unpublished node sa_page'
-        - 'access_unpublished node sa_post'
     # Set permissions for content editor role.
     user.role.content_editor:
       grantPermissions:
@@ -91,8 +89,6 @@ config:
         - 'administer menu'
         - 'administer redirects'
         - 'change own username'
-        - 'clone sa_page content'
-        - 'clone sa_post content'
         - 'create media'
         - 'create sa_page content'
         - 'create sa_post content'
@@ -128,8 +124,6 @@ config:
         - 'view all media revisions'
         - 'view all revisions'
         - 'view any unpublished content'
-        - 'view any unpublished sa_page content'
-        - 'view any unpublished sa_post content'
         - 'view latest version'
         - 'view own unpublished content'
         - 'view own unpublished media'
