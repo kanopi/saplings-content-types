@@ -3,6 +3,7 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.full
+    - field.field.node.sa_post.field_overlay_invert
     - field.field.node.sa_post.sa_author
     - field.field.node.sa_post.sa_author_url
     - field.field.node.sa_post.sa_body
@@ -199,7 +200,7 @@ content:
       nomarkup:
         enabled: true
         separator: ''
-        referenced_entity: 0
+        referenced_entity: '0'
       ds:
         ds_limit: ''
         ft:
@@ -211,6 +212,7 @@ content:
     weight: 5
     region: content
 hidden:
+  field_overlay_invert: true
   links: true
   published_at: true
   sa_category: true

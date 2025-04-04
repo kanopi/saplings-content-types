@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.sa_page.field_overlay_invert
     - field.field.node.sa_page.sa_components
     - field.field.node.sa_page.sa_description
     - field.field.node.sa_page.sa_featured_media
@@ -80,6 +81,7 @@ content:
     weight: 2
     region: content
 hidden:
+  field_overlay_invert: true
   links: true
   published_at: true
   sa_components: true
