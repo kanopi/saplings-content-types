@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.sa_page.field_overlay_invert
     - field.field.node.sa_page.sa_components
     - field.field.node.sa_page.sa_description
     - field.field.node.sa_page.sa_featured_media
@@ -46,11 +47,8 @@ third_party_settings:
       children:
         - sa_description
         - sa_featured_media
-        - sa_overlay
-        - sa_header_position
         - sa_hide_header
-        - sa_include_pause_button
-        - sa_include_mute_button
+        - group_hero_options
       label: Summary
       region: content
       parent_name: group_administration
@@ -96,6 +94,26 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+    group_hero_options:
+      children:
+        - sa_overlay
+        - field_overlay_invert
+        - sa_header_position
+        - sa_include_mute_button
+        - sa_include_pause_button
+      label: 'Hero Options'
+      region: content
+      parent_name: group_summary
+      weight: 10
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
 id: node.sa_page.default
 targetEntityType: node
 bundle: sa_page
@@ -107,9 +125,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_overlay_invert:
+    type: options_select
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -161,7 +185,7 @@ content:
     third_party_settings: {  }
   sa_featured_media:
     type: media_library_widget
-    weight: 5
+    weight: 4
     region: content
     settings:
       media_types:
@@ -174,34 +198,34 @@ content:
         edit_form_mode: default
   sa_header_position:
     type: options_select
-    weight: 7
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   sa_hide_header:
     type: boolean_checkbox
-    weight: 8
+    weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sa_include_mute_button:
     type: boolean_checkbox
-    weight: 10
+    weight: 17
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sa_include_pause_button:
     type: boolean_checkbox
-    weight: 9
+    weight: 18
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sa_overlay:
     type: options_select
-    weight: 6
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }

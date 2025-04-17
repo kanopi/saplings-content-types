@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overlay_invert
+    - node.type.sa_page
+  module:
+    - options
+id: node.sa_page.field_overlay_invert
+field_name: field_overlay_invert
+entity_type: node
+bundle: sa_page
+label: 'Overlay Invert'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

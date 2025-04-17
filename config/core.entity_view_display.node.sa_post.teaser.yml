@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.sa_post.field_overlay_invert
     - field.field.node.sa_post.sa_author
     - field.field.node.sa_post.sa_author_url
     - field.field.node.sa_post.sa_body
@@ -102,6 +103,7 @@ content:
     weight: 0
     region: image
 hidden:
+  field_overlay_invert: true
   links: true
   published_at: true
   sa_author: true
