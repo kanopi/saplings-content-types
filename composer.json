@@ -25,6 +25,6 @@
         "drupal/token_or": "^2.3",
         "drupal/tour": "^2",
         "kanopi/saplings-component-types": "^2",
-        "kanopi/saplings-content-base": "^1.0.0-beta.10"
+        "kanopi/saplings-content-base": "^2"
     }
 }
