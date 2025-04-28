@@ -4,16 +4,15 @@ dependencies:
   config:
     - field.storage.node.sa_components
     - node.type.sa_page
-    - paragraphs.paragraphs_type.sa_existing_content_card
     - paragraphs.paragraphs_type.sa_accordion_item
+    - paragraphs.paragraphs_type.sa_card
     - paragraphs.paragraphs_type.sa_carousel_item
+    - paragraphs.paragraphs_type.sa_existing_content_card
     - paragraphs.paragraphs_type.sa_faq_item
     - paragraphs.paragraphs_type.sa_stat
     - paragraphs.paragraphs_type.sa_tab
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: XNMXpc3fPV7Nvi606htqRAxGD-2-Up37LYJiWNNuQcA
 id: node.sa_page.sa_components
 field_name: sa_components
 entity_type: node
@@ -29,16 +28,14 @@ settings:
   handler_settings:
     target_bundles:
       sa_accordion_item: sa_accordion_item
-      sa_existing_content_card: sa_existing_content_card
+      sa_card: sa_card
       sa_carousel_item: sa_carousel_item
+      sa_existing_content_card: sa_existing_content_card
       sa_tab: sa_tab
       sa_stat: sa_stat
       sa_faq_item: sa_faq_item
     negate: 1
     target_bundles_drag_drop:
-      sa_existing_content_card:
-        weight: 18
-        enabled: true
       sa_accordion:
         weight: 13
         enabled: false
@@ -50,7 +47,7 @@ settings:
         enabled: false
       sa_card:
         weight: 16
-        enabled: false
+        enabled: true
       sa_carousel:
         weight: 17
         enabled: false
@@ -60,6 +57,9 @@ settings:
       sa_columns:
         weight: 23
         enabled: false
+      sa_existing_content_card:
+        weight: 18
+        enabled: true
       sa_faq:
         weight: 23
         enabled: false
@@ -69,8 +69,17 @@ settings:
       sa_filtered_list:
         weight: 19
         enabled: false
+      sa_hero:
+        weight: 32
+        enabled: false
       sa_media:
         weight: 20
+        enabled: false
+      sa_media_collection:
+        weight: 34
+        enabled: false
+      sa_multi_item_carousel:
+        weight: 35
         enabled: false
       sa_side_by_side:
         weight: 21

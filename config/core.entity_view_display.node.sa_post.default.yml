@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.sa_post.field_overlay_invert
+    - field.field.node.sa_post.sa_overlay_opacity
     - field.field.node.sa_post.sa_author
     - field.field.node.sa_post.sa_author_url
     - field.field.node.sa_post.sa_body
@@ -23,14 +23,14 @@ dependencies:
     - field_group
     - link
     - nomarkup
+    - sdc_display
     - text
     - user
 third_party_settings:
   field_group:
     group_container:
       children:
-        - sa_external_source
-        - sa_body
+        - group_row
       label: Container
       parent_name: ''
       region: content
@@ -47,74 +47,58 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-    group_sa_related_posts_row:
+    group_col_class:
       children:
-        - sa_related_posts
-      label: 'Related Posts Row'
-      parent_name: ''
+        - sa_external_source
+        - sa_body
+      label: 'Col Class'
+      parent_name: group_row
       region: content
-      weight: 1
-      format_type: pattern_formatter
+      weight: 21
+      format_type: html_element
       format_settings:
-        pattern: grid_row
-        variants:
-          accordion: default
-          alert: primary
-          button: default
-          button_group: sm
-          card: default
-          carousel: default
-          close_button: default
-          dropdown: dropdown
-          list: default
-          list_group: default
-          list_group_item: default
-          modal: sm
-          nav: default
-          navbar: default
-          navbar_nav: default
-          offcanvas: start
-          pagination: sm
-          progress: default
-          spinner: border__border_sm
-          table: default
-          animated-stat: default
-          button-link: default
-          nav_tabs: default
-          page: default
-          post: default
-          simple_card: default
-        pattern_mapping:
-          'fields:sa_related_posts':
-            destination: content
-            weight: 0
-            plugin: fields
-            source: sa_related_posts
-        pattern_settings:
-          grid_row:
-            with_container_token: ''
-            gutters: g-3
-            gutters_token: ''
-            gutters_horizontal: ''
-            gutters_horizontal_token: ''
-            gutters_vertical: ''
-            gutters_vertical_token: ''
-            col_xs: col-12
-            col_xs_token: ''
-            col_sm: ''
-            col_sm_token: ''
-            col_md: col-md-6
-            col_md_token: ''
-            col_lg: col-lg-4
-            col_lg_token: ''
-            col_xl: ''
-            col_xl_token: ''
-            col_xxl: ''
-            col_xxl_token: ''
-            spacing_margin_bottom: mb-5
-            spacing_margin_bottom_token: ''
-            with_container: 0
-        show_empty_fields: 0
+        classes: 'col col-12 col-lg-8 col-xl-6'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_row:
+      children:
+        - group_col_class
+      label: Row
+      parent_name: group_container
+      region: content
+      weight: 20
+      format_type: html_element
+      format_settings:
+        classes: 'row justify-content-center'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
 id: node.sa_post.default
 targetEntityType: node
 bundle: sa_post
@@ -147,21 +131,8 @@ content:
         referenced_entity: ''
     weight: 1
     region: content
-  sa_related_posts:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: teaser
-      link: false
-    third_party_settings:
-      nomarkup:
-        enabled: false
-        separator: ''
-        referenced_entity: '0'
-    weight: 2
-    region: content
 hidden:
-  field_overlay_invert: true
+  sa_overlay_opacity: true
   links: true
   published_at: true
   sa_author: true
@@ -171,6 +142,7 @@ hidden:
   sa_featured_image: true
   sa_header_position: true
   sa_overlay: true
+  sa_related_posts: true
   sa_robots: true
   sa_seo_description: true
   sa_seo_image: true

@@ -1,8 +1,9 @@
+uuid: e7a7cff6-911b-4b08-a1ae-301f0c9bac8d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.sa_post.field_overlay_invert
+    - field.field.node.sa_post.sa_overlay_opacity
     - field.field.node.sa_post.sa_author
     - field.field.node.sa_post.sa_author_url
     - field.field.node.sa_post.sa_body
@@ -123,7 +124,7 @@ third_party_settings:
     group_hero_options:
       children:
         - sa_overlay
-        - field_overlay_invert
+        - sa_overlay_opacity
         - sa_header_position
       label: 'Hero Options'
       region: content
@@ -149,7 +150,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_overlay_invert:
+  sa_overlay_opacity:
     type: options_select
     weight: 36
     region: content
