@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.sa_page.field_overlay_invert
+    - field.field.node.sa_page.sa_overlay_opacity
     - field.field.node.sa_page.sa_components
     - field.field.node.sa_page.sa_description
     - field.field.node.sa_page.sa_featured_media
@@ -61,7 +61,7 @@ content:
     weight: 0
     region: content
 hidden:
-  field_overlay_invert: true
+  sa_overlay_opacity: true
   links: true
   published_at: true
   sa_description: true

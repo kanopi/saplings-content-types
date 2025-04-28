@@ -1,8 +1,9 @@
+uuid: f7c355e8-d71e-4792-a6b2-23b7dac636fe
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.sa_page.field_overlay_invert
+    - field.field.node.sa_page.sa_overlay_opacity
     - field.field.node.sa_page.sa_components
     - field.field.node.sa_page.sa_description
     - field.field.node.sa_page.sa_featured_media
@@ -97,7 +98,7 @@ third_party_settings:
     group_hero_options:
       children:
         - sa_overlay
-        - field_overlay_invert
+        - sa_overlay_opacity
         - sa_header_position
         - sa_include_mute_button
         - sa_include_pause_button
@@ -114,6 +115,8 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
+_core:
+  default_config_hash: lNR_njPtioFBLttlH0HrvscIaJ6_IhzKKn-UsB3X6Yk
 id: node.sa_page.default
 targetEntityType: node
 bundle: sa_page
@@ -125,7 +128,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_overlay_invert:
+  sa_overlay_opacity:
     type: options_select
     weight: 15
     region: content
@@ -163,11 +166,11 @@ content:
       title: Component
       title_plural: Components
       edit_mode: closed
-      closed_mode: preview
+      closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       add_mode: button
-      form_display_mode: preview
+      form_display_mode: default
       default_paragraph_type: _none
       features:
         add_above: '0'
