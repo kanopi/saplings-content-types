@@ -27,7 +27,7 @@ install:
   - token_or
   - tour
   - ui_patterns_layouts
-  - views_custom_cache_tag
+  - views_bootstrap
 config:
   strict: false
   import:

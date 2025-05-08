@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.sa_page.sa_overlay_opacity
     - field.field.node.sa_page.sa_components
     - field.field.node.sa_page.sa_description
     - field.field.node.sa_page.sa_featured_media
@@ -12,86 +11,118 @@ dependencies:
     - field.field.node.sa_page.sa_include_mute_button
     - field.field.node.sa_page.sa_include_pause_button
     - field.field.node.sa_page.sa_overlay
+    - field.field.node.sa_page.sa_overlay_opacity
     - field.field.node.sa_page.sa_robots
     - field.field.node.sa_page.sa_seo_description
     - field.field.node.sa_page.sa_seo_image
     - field.field.node.sa_page.sa_seo_page_title
     - node.type.sa_page
   module:
+    - ds
     - layout_builder
     - nomarkup
     - sdc_display
     - user
 third_party_settings:
   sdc_display:
-    enabled: true
+    enabled: false
     component:
-      machine_name: 'arbor:card'
-      show_deprecated: null
+      machine_name: ''
     mappings:
       static:
-        props:
-          image_col_classes: ''
-          content_col_classes: ''
-          margin: null
-          image_position: null
-          h_100: null
-          variant: null
-        slots:
-          image:
-            value: ''
-            format: full_html
-          header:
-            value: ''
-            format: full_html
-          content:
-            value: ''
-            format: full_html
-          footer:
-            value: ''
-            format: full_html
+        props: {  }
+        slots: {  }
       dynamic:
-        props:
-          attributes: null
-          margin: null
-          image_position: null
-          h_100: null
-          header_attributes: null
-          footer_attributes: null
-          row_attributes: null
-          image_col_attributes: null
-          content_col_attributes: null
-          image_col_classes: null
-          content_col_classes: null
-          variant: null
-        slots:
-          image:
-            sa_featured_media: sa_featured_media
-            sa_description: null
-            uid: null
-            title: null
-            created: null
-          header:
-            title: title
-            sa_description: null
-            sa_featured_media: null
-            uid: null
-            created: null
-          content:
-            sa_description: sa_description
-            sa_featured_media: null
-            uid: null
-            title: null
-            created: null
-          footer:
-            sa_description: null
-            sa_featured_media: null
-            uid: null
-            title: null
-            created: null
+        props: {  }
+        slots: {  }
   layout_builder:
     enabled: false
     allow_custom: false
+  ds:
+    layout:
+      id: 'ui_patterns:arbor:card'
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        ui_patterns:
+          component_id: 'arbor:card'
+          variant_id:
+            source_id: select
+            source:
+              value: ''
+          props:
+            attributes:
+              source_id: attributes
+              source:
+                value: ''
+            margin:
+              source_id: select
+              source:
+                value: ''
+            image_position:
+              source_id: select
+              source:
+                value: ''
+            h_100:
+              source_id: checkbox
+              source:
+                value: '1'
+            header_attributes:
+              source_id: attributes
+              source:
+                value: ''
+            footer_attributes:
+              source_id: attributes
+              source:
+                value: ''
+            row_attributes:
+              source_id: attributes
+              source:
+                value: 'class="g-0"'
+            image_col_attributes:
+              source_id: attributes
+              source:
+                value: 'class="col-md-4"'
+            content_col_attributes:
+              source_id: attributes
+              source:
+                value: 'class="col-md-8"'
+            image_col_classes:
+              source_id: textfield
+              source:
+                value: ''
+            content_col_classes:
+              source_id: textfield
+              source:
+                value: ''
+          slots: {  }
+    regions:
+      image:
+        - sa_featured_media
+      header:
+        - node_title
+      content:
+        - sa_description
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          'link class': ''
+          link_target: ''
+          wrapper: h3
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.sa_page.teaser
 targetEntityType: node
 bundle: sa_page
@@ -102,7 +133,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   sa_featured_media:
     type: entity_reference_entity_view
@@ -121,9 +152,8 @@ content:
           machine_name: null
           show_deprecated: 0
     weight: 0
-    region: content
+    region: image
 hidden:
-  sa_overlay_opacity: true
   links: true
   published_at: true
   sa_components: true
@@ -132,6 +162,7 @@ hidden:
   sa_include_mute_button: true
   sa_include_pause_button: true
   sa_overlay: true
+  sa_overlay_opacity: true
   sa_robots: true
   sa_seo_description: true
   sa_seo_image: true

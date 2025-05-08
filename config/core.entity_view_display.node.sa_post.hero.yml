@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.hero
-    - field.field.node.sa_post.sa_overlay_opacity
     - field.field.node.sa_post.sa_author
     - field.field.node.sa_post.sa_author_url
     - field.field.node.sa_post.sa_body
@@ -13,6 +12,7 @@ dependencies:
     - field.field.node.sa_post.sa_featured_image
     - field.field.node.sa_post.sa_header_position
     - field.field.node.sa_post.sa_overlay
+    - field.field.node.sa_post.sa_overlay_opacity
     - field.field.node.sa_post.sa_related_posts
     - field.field.node.sa_post.sa_robots
     - field.field.node.sa_post.sa_seo_description
@@ -56,54 +56,107 @@ third_party_settings:
           content:
             value: ''
             format: full_html
+          date:
+            value: ''
+            format: full_html
+          author:
+            value: ''
+            format: full_html
+          author_url:
+            value: ''
+            format: full_html
       dynamic:
         props:
-          attributes: ''
-          justify: sa_header_position
           overlay: sa_overlay
           overlay_opacity: sa_overlay_opacity
-          variant: ''
+          attributes: null
           container: null
           margin: null
           padding: null
           width: null
           hide_header: null
+          justify: null
           include_mute_button: null
           include_pause_button: null
+          variant: null
         slots:
           heading:
             title: title
             field_overlay_opacity: null
+            published_at: null
             sa_author: null
             sa_author_url: null
             sa_description: null
             sa_featured_image: null
             sa_header_position: null
             sa_overlay: null
+            sa_overlay_opacity: null
             uid: null
             created: null
           hero_background:
             sa_featured_image: sa_featured_image
             field_overlay_opacity: null
+            published_at: null
             sa_author: null
             sa_author_url: null
             sa_description: null
             sa_header_position: null
             sa_overlay: null
+            sa_overlay_opacity: null
             uid: null
             title: null
             created: null
           content:
-            sa_author: sa_author
             sa_description: sa_description
             field_overlay_opacity: null
+            published_at: null
+            sa_author: null
             sa_author_url: null
             sa_featured_image: null
             sa_header_position: null
             sa_overlay: null
+            sa_overlay_opacity: null
             uid: null
             title: null
             created: null
+          date:
+            published_at: published_at
+            field_overlay_opacity: null
+            sa_author: null
+            sa_author_url: null
+            sa_description: null
+            sa_featured_image: null
+            sa_header_position: null
+            sa_overlay: null
+            sa_overlay_opacity: null
+            uid: null
+            title: null
+            created: null
+          author:
+            sa_author: sa_author
+            field_overlay_opacity: null
+            published_at: null
+            sa_author_url: null
+            sa_description: null
+            sa_featured_image: null
+            sa_header_position: null
+            sa_overlay: null
+            sa_overlay_opacity: null
+            uid: null
+            title: null
+            created: null
+          author_url:
+            sa_author_url: sa_author_url
+            field_overlay_opacity: null
+            published_at: null
+            sa_author: null
+            sa_description: null
+            sa_featured_image: null
+            sa_header_position: null
+            sa_overlay: null
+            sa_overlay_opacity: null
+            uid: null
+            title: null
 id: node.sa_post.hero
 targetEntityType: node
 bundle: sa_post
@@ -125,12 +178,50 @@ content:
           show_deprecated: 0
     weight: 2
     region: content
+  published_at:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: month_and_year
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+        description: ''
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 7
+    region: content
   sa_author:
     type: string
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
     weight: 2
     region: content
   sa_author_url:
@@ -138,11 +229,20 @@ content:
     label: hidden
     settings:
       trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
     weight: 1
     region: content
   sa_description:
@@ -197,9 +297,24 @@ content:
           show_deprecated: 0
     weight: 5
     region: content
+  sa_overlay_opacity:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
 hidden:
   links: true
-  published_at: true
   sa_body: true
   sa_category: true
   sa_external_source: true

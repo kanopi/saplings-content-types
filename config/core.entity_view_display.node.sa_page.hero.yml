@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.hero
-    - field.field.node.sa_page.sa_overlay_opacity
     - field.field.node.sa_page.sa_components
     - field.field.node.sa_page.sa_description
     - field.field.node.sa_page.sa_featured_media
@@ -12,6 +11,7 @@ dependencies:
     - field.field.node.sa_page.sa_include_mute_button
     - field.field.node.sa_page.sa_include_pause_button
     - field.field.node.sa_page.sa_overlay
+    - field.field.node.sa_page.sa_overlay_opacity
     - field.field.node.sa_page.sa_robots
     - field.field.node.sa_page.sa_seo_description
     - field.field.node.sa_page.sa_seo_image
@@ -69,7 +69,6 @@ third_party_settings:
         slots:
           heading:
             title: title
-            sa_overlay_opacity: null
             sa_description: null
             sa_featured_media: null
             sa_header_position: null
@@ -77,29 +76,30 @@ third_party_settings:
             sa_include_mute_button: null
             sa_include_pause_button: null
             sa_overlay: null
+            sa_overlay_opacity: null
             uid: null
             created: null
           hero_background:
             sa_featured_media: sa_featured_media
-            sa_overlay_opacity: null
             sa_description: null
             sa_header_position: null
             sa_hide_header: null
             sa_include_mute_button: null
             sa_include_pause_button: null
             sa_overlay: null
+            sa_overlay_opacity: null
             uid: null
             title: null
             created: null
           content:
             sa_description: sa_description
-            sa_overlay_opacity: null
             sa_featured_media: null
             sa_header_position: null
             sa_hide_header: null
             sa_include_mute_button: null
             sa_include_pause_button: null
             sa_overlay: null
+            sa_overlay_opacity: null
             uid: null
             title: null
             created: null
@@ -108,22 +108,6 @@ targetEntityType: node
 bundle: sa_page
 mode: hero
 content:
-  sa_overlay_opacity:
-    type: list_key
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      nomarkup:
-        enabled: true
-        separator: '|'
-        referenced_entity: ''
-      sdc_display:
-        enabled: 0
-        component:
-          machine_name: null
-          show_deprecated: 0
-    weight: 2
-    region: content
   sa_description:
     type: basic_string
     label: hidden
@@ -226,6 +210,22 @@ content:
         separator: '|'
         referenced_entity: ''
     weight: 1
+    region: content
+  sa_overlay_opacity:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
     region: content
 hidden:
   links: true
