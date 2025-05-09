@@ -1,12 +1,15 @@
+uuid: 1b161a31-c0ee-4860-a8f1-fdee5e781f28
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.storage.node.sa_related_posts
     - node.type.sa_post
   module:
     - node
     - user
+    - views_bootstrap
 id: sa_posts
 label: Posts
 module: views
@@ -192,6 +195,50 @@ display:
           validate_options: {  }
           break_phrase: true
           not: false
+        uuid:
+          id: uuid
+          table: node
+          field: uuid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: uuid
+          plugin_id: string
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: node
+          default_argument_options: {  }
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          glossary: false
+          limit: 0
+          case: none
+          path_case: none
+          transform_dash: false
+          break_phrase: false
+        sa_related_posts_target_id:
+          id: sa_related_posts_target_id
+          table: node__sa_related_posts
+          field: sa_related_posts_target_id
+          plugin_id: entity_target_id
       filters:
         status:
           id: status
@@ -214,14 +261,21 @@ display:
           value:
             sa_post: sa_post
       style:
-        type: default
+        type: views_bootstrap_grid
         options:
-          row_class: 'col-md-3 mb-3'
+          row_class: 'gy-4 '
           default_row_class: false
-          uses_fields: false
+          uses_fields: true
+          grid_class: 'gy-4 '
+          col_xs: col-12
+          col_sm: col-sm-12
+          col_md: col-md-6
+          col_lg: col-lg-3
+          col_xl: col-xl-3
       row:
         type: 'entity:node'
         options:
+          relationship: sa_related_posts
           view_mode: teaser
       query:
         type: views_query
@@ -232,7 +286,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      css_class: 'row card-deck'
+      css_class: ''
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -252,13 +306,135 @@ display:
     display_plugin: block
     position: 2
     display_options:
+      fields:
+        sa_related_posts:
+          id: sa_related_posts
+          table: node__sa_related_posts
+          field: sa_related_posts
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_view
+          settings:
+            view_mode: teaser
+          group_column: target_id
+          group_columns: {  }
+          group_rows: false
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
-        type: some
+        type: none
         options:
           offset: 0
-          items_per_page: 4
+      arguments:
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: node_nid
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: node
+          default_argument_options: {  }
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: 'gy-4 '
+          default_row_class: false
+          grid_class: 'gy-4 '
+          col_xs: col-12
+          col_sm: col-sm-12
+          col_md: col-md-6
+          col_lg: col-lg-3
+          col_xl: col-xl-3
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
       defaults:
         pager: false
+        style: false
+        row: false
+        fields: false
+        arguments: false
       display_description: ''
       display_extenders: {  }
       block_description: 'Posts (Up to Four)'
@@ -270,7 +446,8 @@ display:
         - url
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.sa_related_posts'
   block_posts:
     id: block_posts
     display_title: 'All Posts'
